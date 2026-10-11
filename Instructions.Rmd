@@ -85,7 +85,10 @@ use_git()
 
 Then, we need to create a unique token with the following function. This token will allow you to connect RStudio and GitHub. 
 
-create_github_token() 
+
+```{r}
+create_github_token()
+```
  
 
 This will generate and open a URL in GitHub for you to generate the token. You can specify the use and how long you would like it to last, but I would leave the other options as is. Then, hit the green "Generate Token". YOU WILL ONLY SEE THIS TOKEN ONCE!! Be ready to copy it to clipboard, and you could store it in a password manager or wherever you will remember.  
@@ -118,10 +121,28 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 ##Pushing and Pulling 
 
-I'm not sure how to push and pull lol 
+#Pushing
 
 "Pushing" will send all of the changes from local (your computer) to the remote (GitHub repository). 
-Click on the "Git" tab in environment. Once you make a change and save, you'll see the file pop up in this tab. Check the box for this file, then click "Commit" (under History).
-A new window should open. Add a comment about your changes and click commit. Once your commit is complete, hit the green Push arrow to send your commits to the remote in GitHub. 
-Refresh you GitHub, you should see a new commit!
+
+*Click on the Git tab in the Environment. Once you make a change and save, you'll see the file pop up in this tab. 
+
+*Check the box for this file, then click "Commit" (under History). (A new window should open.)
+
+*Add a comment about your changes and click commit. 
+
+*Once your commit is complete, hit the green Push arrow to send your commits to the remote in GitHub. 
++Refresh you GitHub, you should see a new commit!
+
+*Pushing frequently (when code is ready) is best practice, like saving your work regulary. Pushing regularly makes sure you're also sharing your progress with teammates often. At least once a day, or once you complete a specific task.
+
+#Pulling
+
+"Pulling" works in the opposite direction: we're grabbing the most recent code from our remote repo in GitHub and bringing it into our local session in R. 
+
+*If you are working on a project alone, your code will match what exists in the remote and this is less important.
+
+*If you are collaborating with others, this should be done regularly to avoid issues. In some cases, you may not be able to push new code if your local project is behind the remote code. 
+
+
 
