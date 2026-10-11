@@ -156,6 +156,8 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 *Once you made changes you're happy with, you can merge these changes to the main. In the Git tab, selecting the branch that you want to __merge to__. In this case, main. 
 
+*When you're finished with a branch, delete it within the terminal with git branch -d branchname.You won't be able to work on this branch anymore, but you'll be able to see in the history that it existed, and the code from your branch will now be in the main repository. 
+
 
 ## References
 
