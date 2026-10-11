@@ -109,3 +109,6 @@ I'm not sure how to push and pull lol
 
 "Pushing" will send all of the changes from local (your computer) to the remote (GitHub repository). 
 Click on the "Git" tab in environment. Once you make a change and save, you'll see the file pop up in this tab. Check the box for this file, then click "Commit" (under History).
+A new window should open. Add a comment about your changes and click commit. Once your commit is complete, hit the green Push arrow to send your commits to the remote in GitHub. 
+Refresh you GitHub, you should see a new commit!
+

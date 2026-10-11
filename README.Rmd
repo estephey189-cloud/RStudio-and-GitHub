@@ -1,0 +1,26 @@
+---
+title: "README"
+output: html_document
+date: "2026-10-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## README
+
+Repository for my second presentation in STAT401 at Loyola University Chicago. 
+
+Present.Rmd outlines the motivation behind this project, and explains how to install Git depending on your OS. 
+
+The Markdown file ConnectingGH&R gives the code and step-by-step written instructions for setting up Github and R. It also outlines how to set up Git/GitHub for new and existing R projects. 
+The corresponding R script only has the code, in order of use. 
+
+Jargon/Git Lexicon:
+repo- repository. Literally just folder
+commit- "save", back up an iteration/changes
+remote- a computer/server with your repository on it
+clone- when you get the repository from the remote for the first time
+pull- get the new commits from collaborators from the remote (from GitHub, to RStudio)
+push- send your new changes/commits to the remote (from RStudio, to GitHub)
