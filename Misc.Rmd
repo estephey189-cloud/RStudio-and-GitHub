@@ -1,0 +1,90 @@
+---
+title: "Miscellaneous"
+output: html_document
+date: "2026-10-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##ICYMI- In Case You Missed It
+
+Let's make sure we're all on the same page. Were you're reading this text right now is the *source* panel. You can work in Rmd, Scripts, and Quarto here, and do the meat of your projects here. There are three other panels to support you:
+
+- Console
+-Environment
+-Files
+
+All four panels work in tandem so that we can do our statistical work in R.
+Let's use some simple code to demonstrate how they interact:
+
+```{r}
+
+#install.packages("tidyverse")
+library(dplyr)
+library(ggplot2)
+
+
+#str(starwars)
+mydata=starwars
+
+#Look at species
+ggplot(data = mydata, aes(x = species)) + 
+  geom_bar() +
+theme(axis.text.x =element_text(angle=60, hjust=1))
+
+
+#look at homeworld  
+ggplot(data = mydata, aes(x = homeworld)) + 
+  geom_bar() +
+theme(axis.text.x =element_text(angle=60, hjust=1))
+```
+
+We see our code is also printed in the *console*. Note that we can also do calculations here, but for anything that you want to reproduce, you should have it in your script/rmd. Let's quickly check the column names of the starwars data. 
+
+But there is a better way! The *environment* shows the data, variables, and custom functions. We can do a cursory insepction of our star wars data in the environment.
+The broom icon will remove all current environment objects. History shows all previous commands. Connections shows remote or local connected databases. And we'll see Git here when we connect our Github!
+
+The *files* / plots/ packages/help panel is where we can see the files in our project folder, review plots ( and easily export them), and see what packages we've already installed. We've seen how to use Help before (search bar, or ?topic in console. ) Viewer displays web content like Shiny apps.
+For a particular file, we can select it and copy its path. 
+Can select packages here to have the library loaded. 
+
+
+```{r}
+hist(mydata$height, main = "Histogram of Height (cm) in Star Wars")
+
+hist(mydata$mass, main = "Histogram of Mass (kg) in Star Wars")
+```
+
+
+## Some Other Tips/Tricks
+#Panel Navigation & Helpful Keystrokes
+We can easily jump between these panels with the following keystrokes: 
+
+Ctrl + ....
+  1- Source
+  2- Console
+  3- Help
+  4- History
+  5- Files 
+  6- Plots
+  7- Packages
+  8- Environment
+  9- Viewer
+
+Ctrl + shift + # expands that panel. 
+Ctrl + shift + returns to four panel view.
+
+Commonly used operators:
+
+To get the "<-" assigner, Option - on Mac, or Ctrl - on Windows
+When using tidyverse, 
+
+Smd shift m(mac) for pipe operator, if it gives you the new one, go to global options and deselect native pipe operator 
+
+
+##Helpful Cheatsheets For Tons of Packages
+
+[Check out this link](https://github.com/rstudio/cheatsheets/blob/main/mosaic.pdf ) for some help cheatsheets/quick references on tons of R packages, on GitHub!
+
