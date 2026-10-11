@@ -55,6 +55,12 @@ Can select packages here to have the library loaded.
 hist(mydata$height, main = "Histogram of Height (cm) in Star Wars")
 
 hist(mydata$mass, main = "Histogram of Mass (kg) in Star Wars")
+
+summary(mydata$mass)
+
+ggplot(data=mydata, aes(x=mass)) + 
+  geom_bar() +
+  xlim(c(0,175))
 ```
 
 

@@ -150,6 +150,10 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 ## Branches
 
+*Branches allow you to make changes to the code, without necessarily updating the main. On a new branch, you can experiment and test code without worry since your main code is untouched and saved locally and remotely!
+
+
+
 ## References
 
 [Happy Git with R](https://happygitwithr.com) is free and available online, and will cover most questions you can have. 
