@@ -1,0 +1,110 @@
+---
+title: "Instructions"
+output: html_document
+date: "2026-10-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+My Goal 
+
+Selfishly, I've wanted to learn how to use GitHub for a while, and given all the advantages I figured you may want to know as well (if you don't already). This presentation will take you through -how to install Git -how to connect RStudio and GitHub -how to set up a new repository ("repo") for new and existing R projects -how to commit, push, and pull 
+
+Feel free to create a new project just to learn how to do this. 
+
+Why Get Git? 
+
+You should get Git so you don't get GOT by poor file management, unoptimized collaboration, or the worst, not having back ups of your code. 
+
+Git is version control, meaning you can see previous iterations of your code (when you commit). Your commits are saved, with the user and time of commit, so you can easily trace back through previous versions. If you want to try something, but want to have a version to fall back on, you will! You have the freedom to experiment with security that your old code is backed up. 
+
+Further, if something were to happen to your computer, you know your code is safe! You can clone all of your saved clone to a new system if needed. 
+
+Additionally, with Git collaborators can share code with updates easily. You'll be able to outline exactly what you changed and when, and your teammates will be able to see too. If you want to experiment, you can branch off from the master code; this allows you to change the code without impacting prior versions for anyone else! If you want to add these changes to the master, you can merge the branch back with the master. 
+
+##What's the difference between Git and GitHub? 
+
+*Git is an open source version control system used locally (your own computer) in either the command line or a GUI. This cannot be accessed by others alone. *GitHub is a cloud-based remote repository.Your work with Git is backed up to Github, where others can see it, clone your cloud, make branches locally (their computer), and if accepted, push back to your master code. GitHub can be accessed by a desktop app, or in a web browser 
+
+##How do I get Git? 
+
+You will need to install Git on your computer. 
+
+*If you have MacOS, you may already have Apple's version of Git installed. +Check by doing the following in the terminal in R, or your command line: git --version. If you already have it installed, you'll see something like "git version 2.39.5 (Apple Git-154)". +Or can go to website below, and install like any other app from web. 
+
+*If you have WindowOS, you can install Git from the Web 
+
+Same for Linux. 
+
+*Quick note: RStudio only has version control capability for Projects, not solo Rmd or Scripts. 
+
+Now we have Git! Or you should, you can check in terminal with git --version. 
+
+How do I get GitHub? 
+
+*Make an account for free! *A free account allows you to work with unlimited collaborators on unlimited public/private repositories. *Private repositories with free plan have some limits: ex. only three collaborators 
+
+You can get GitHub Pro free as a student! 
+
+##Connecting Git, GitHub, and R 
+
+First, we need to configure Git, basically letting it know who were are. Run the following code in the console with your name, and the email associated with your GitHub account. Note: You only need to do this once on your machine.  
+
+#install.packages("usethis") 
+library(usethis) 
+use_git_config(user.name = "Your Name", user.email="youremail@mail.com") 
+ 
+
+And...nothing happened. Well, there was no output. But in the background, Git now knows who were are and will use this information for all of our future commits. This how Git knows who makes which changes to a project.  
+
+Now we can use Git, locally! i.e., on your own computer for solo projects.  
+
+To create a repository, first create a new project in a new directory. You should have the option to check "Create a git repository", and that will work! I'll show another way below which can also be used for new and existing projects.  
+
+We should have the "usethis" package installed, so load in the library again, and tell R that you want to use Git for version control with the use_git() command. It will ask you if it is okay to commit files, select affirmative response. 
+
+library(usethis) 
+use_git() 
+ 
+
+Then, we need to create a unique token with the following function. This token will allow you to connect RStudio and GitHub. 
+
+create_github_token() 
+ 
+
+This will generate and open a URL in GitHub for you to generate the token. You can specify the use and how long you would like it to last, but I would leave the other options as is. Then, hit the green "Generate Token". YOU WILL ONLY SEE THIS TOKEN ONCE!! Be ready to copy it to clipboard, and you could store it in a password manager or wherever you will remember.  
+
+Next, loan in the follow package, and call the following command in console. You'll then be prompted to input your unique token (I hope you put it where you can find it!) Finally, we'll use GitHub.  
+
+You should see a Git tab in your environment panel.  
+
+library(gitcreds) 
+gitcreds_set() 
+ 
+use_github() 
+ 
+
+##Git, Locally 
+
+Let's look at our Git history in RStudio.  
+
+In your environment panel, select the Git tab and click History (below Tutorial tab). This should open a second window where you can see all of your commits. Clicking on a commit will show all of the changes you made per file: additions in green, deletions in red. 
+
+If you are working on a project alone or don't want to share this project to GitHub, you can still use Git to track changes, and review previous versions.  
+
+RStudio Projects and GitHub Repos 
+
+Now you can back all of your RStudio project up to GitHub! There are a couple of way to do this: 
+
+*RStudio First: Create you project in RStudio, then do as we did above with the use_git() and use_github() functions. 
+
+*GitHub First: You can create your repo in GitHub first, then start you project in RStudio and instead of selecting New Directory, select Version Control. You'll be prompted to add the URL for the repository you started in GitHub. Best practice: for "Project Directory name:", use the same name as the repository you created in GitHub.  
+
+##Pushing and Pulling 
+
+I'm not sure how to push and pull lol 
+
+"Pushing" will send all of the changes from local (your computer) to the remote (GitHub repository). Once we commit a change, a new window will pop 
