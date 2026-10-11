@@ -84,7 +84,4 @@ When using tidyverse,
 Smd shift m(mac) for pipe operator, if it gives you the new one, go to global options and deselect native pipe operator 
 
 
-##Helpful Cheatsheets For Tons of Packages
-
-[Check out this link](https://github.com/rstudio/cheatsheets/blob/main/mosaic.pdf ) for some help cheatsheets/quick references on tons of R packages, on GitHub!
 

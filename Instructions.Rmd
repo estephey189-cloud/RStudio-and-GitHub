@@ -148,4 +148,15 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 *Pull this comment from Github!
 
+## Branches
+
+## References
+
+[Happy Git with R](https://happygitwithr.com) is free and available online, and will cover most questions you can have. 
+
+I relied on [this guide](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r) heavily, and he has short videos for steps outlined here if needed. 
+
+
+[Check out this link](https://github.com/rstudio/cheatsheets/blob/main/mosaic.pdf ) for some helpful cheatsheets/quick references on tons of R packages, on GitHub!
+
 
