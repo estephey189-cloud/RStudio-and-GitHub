@@ -146,5 +146,6 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 *To pull, go to the Git tab in Environment panel, and push the pull button. New code will appear in your local session. 
 
+*Pull this comment from Github!
 
 
