@@ -144,5 +144,7 @@ Now you can back all of your RStudio project up to GitHub! There are a couple of
 
 *If you are collaborating with others, this should be done regularly to avoid issues. In some cases, you may not be able to push new code if your local project is behind the remote code. 
 
+*To pull, go to the Git tab in Environment panel, and push the pull button. New code will appear in your local session. 
+
 
 
